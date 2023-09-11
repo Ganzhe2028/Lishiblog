@@ -10239,6 +10239,8 @@ h1.page-title + .tag-cloud-list {
   -ms-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
+  -webkit-box-shadow: var(--anzhiyu-shadow-black);
+  box-shadow: var(--anzhiyu-shadow-black);
 }
 .banner-button.secondary {
   background: var(--anzhiyu-secondbg);
@@ -23660,7 +23662,6 @@ div#swiper_container:hover {
   top: 0;
   left: 0;
   box-shadow: 0 -109px 133px -9px #000000 inset;
-  display: none;
 }
 
 .topGroup .todayCard.hide {
