@@ -1,1 +1,1 @@
-var posts=["2023/09/14/hello-world copy 2/","2023/09/14/hello-world copy 3/","2023/09/14/hello-world copy 4/","2023/09/14/hello-world copy/","2023/09/14/hello-world copy 5/","2023/09/09/hello-world/","2023/09/15/欢迎来到阿兹卡班/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
+var posts=["2023/09/15/欢迎来到阿兹卡班/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
