@@ -16605,7 +16605,7 @@ div.btns.rounded a > i:first-child {
   display: inline-block;
   margin: 0 4px 6px;
   padding: 0 15px;
-  background-color: var(--btn-anzhiyu-color, #2323ef);
+  background-color: var(--btn-anzhiyu-color, #5da82e);
   color: #fff;
   line-height: 2;
   border-radius: 8px;
@@ -16657,12 +16657,12 @@ div.btns.rounded a > i:first-child {
 }
 #article-container .btn-anzhiyu.outline {
   border: 1px solid transparent;
-  border-color: var(--btn-anzhiyu-color, #2323ef);
+  border-color: var(--btn-anzhiyu-color, #5da82e);
   background-color: transparent;
-  color: var(--btn-anzhiyu-color, #2323ef);
+  color: var(--btn-anzhiyu-color, #5da82e);
 }
 #article-container .btn-anzhiyu.outline:hover {
-  background-color: var(--btn-anzhiyu-color, #2323ef);
+  background-color: var(--btn-anzhiyu-color, #5da82e);
 }
 #article-container .btn-anzhiyu.outline:hover {
   color: #fff !important;
@@ -17742,7 +17742,7 @@ kbd {
   color: #fff;
 }
 .hl-label.default {
-  background-color: #2323ef;
+  background-color: #5da82e;
 }
 .hl-label.blue {
   background-color: #428bca;
