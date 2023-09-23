@@ -2945,7 +2945,7 @@ table td {
   border: var(--style-border-always);
 }
 *::selection {
-  background: #2128bd;
+  background: #01855f;
   color: #f7f7f7;
 }
 button {
@@ -5358,7 +5358,7 @@ body[data-type='about'] #web_bg {
   position: relative;
   height: 315px;
   width: 100%;
-  background: #2128bd;
+  background: #01855f;
   overflow: hidden;
 }
 .shape {
@@ -5459,7 +5459,7 @@ body[data-type='about'] #web_bg {
 }
 .cursor {
   position: absolute;
-  background: #2128bd;
+  background: #01855f;
   width: 20px;
   height: 20px;
   margin: -10px 0 0 -10px;
