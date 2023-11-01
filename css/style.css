@@ -1,0 +1,25 @@
+.left-padding {
+    padding-left: 25px;
+    /* 设置左边的空隙为25像素 */
+  }
+  
+  .fix-h3 {
+    font-size: 19px;
+    margin-bottom: 0;
+  }
+  
+  .center {
+    text-align: bottom;
+  }
+  
+  @media (min-width: 768px) {
+    .dropdown-menu-fixed {
+      margin-left: 12px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dropdown-menu-fixed {
+      margin-left: 24px;
+    }
+  }
