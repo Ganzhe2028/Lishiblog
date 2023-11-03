@@ -1,1 +1,1 @@
-var posts=["2023/11/02/万圣节配音活动/","2023/09/15/欢迎来到阿兹卡班/","2023/09/21/理实新闻联播-9-21/","2023/09/23/理实班圆明园半日游/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
+var posts=["2023/09/15/欢迎来到阿兹卡班/","2023/09/21/理实新闻联播-9-21/","2023/09/23/理实班圆明园半日游/","2023/11/02/万圣节配音活动/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
