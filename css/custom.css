@@ -1,3 +1,7 @@
-.top-img-div {
-    filter: brightness(85%);
+/* nav-site-page 渐显优化 */
+.site-page {
+    transition: background-color 0.5s !important; 
+}
+.site-page:hover {
+    background-color: #5da82e !important;
 }

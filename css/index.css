@@ -11684,6 +11684,11 @@ h1.page-title + .tag-cloud-list {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-transition: background-color 0.5s !important;
+  -moz-transition: background-color 0.5s !important;
+  -o-transition: background-color 0.5s !important;
+  -ms-transition: background-color 0.5s !important;
+  transition: background-color 0.5s !important;
 }
 #nav.hide-menu #toggle-menu .site-page i {
   font-size: 1.35rem;
@@ -11703,9 +11708,15 @@ h1.page-title + .tag-cloud-list {
   padding-bottom: 6px;
   font-size: 0.78em;
   cursor: pointer;
+  -webkit-transition: background-color 0.5s !important;
+  -moz-transition: background-color 0.5s !important;
+  -o-transition: background-color 0.5s !important;
+  -ms-transition: background-color 0.5s !important;
+  transition: background-color 0.5s !important;
 }
 #nav .site-page:hover {
   color: var(--anzhiyu-white) !important;
+  background-color: #5da82e !important;
 }
 .main-hero-waves-area {
   width: 100%;
@@ -13521,14 +13532,14 @@ h1.page-title + .tag-cloud-list {
   }
 }
 @media screen and (min-width: 768px) {
-  .menus_item:hover > a.site-page {
+  .menus_item:hover > a. {
+    -webkit-transition: background-color 0.5s !important;
+    -moz-transition: background-color 0.5s !important;
+    -o-transition: background-color 0.5s !important;
+    -ms-transition: background-color 0.5s !important;
+    transition: background-color 0.5s !important;
     color: var(--anzhiyu-white) !important;
     background: var(--anzhiyu-main);
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
-    -ms-transition: 0.3s;
-    transition: 0.3s;
     -webkit-box-shadow: var(--anzhiyu-shadow-main);
     box-shadow: var(--anzhiyu-shadow-main);
   }
@@ -15812,6 +15823,11 @@ blockquote {
   position: relative;
   padding-left: 0.3rem;
   color: var(--anzhiyu-fontcolor);
+  -webkit-transition: background-color 0.5s !important;
+  -moz-transition: background-color 0.5s !important;
+  -o-transition: background-color 0.5s !important;
+  -ms-transition: background-color 0.5s !important;
+  transition: background-color 0.5s !important;
 }
 #sidebar #sidebar-menus .menus_items .site-page i:first-child {
   width: 15%;
