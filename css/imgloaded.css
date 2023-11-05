@@ -19,7 +19,6 @@
     background-repeat: no-repeat;
     opacity: 0;
     transition: opacity 1s;
-    z-index: 9;
 }
   
 @keyframes blur-to-clear {
@@ -46,9 +45,10 @@
   
 .pl-visible {
     opacity: 1;
-    background-color: rgba(0, 0, 0, 0.001); /* 透明度为0.5，颜色为淡黑色 */
+    background-color: rgba(0, 0, 0, .2); /* 透明度为0.5，颜色为淡黑色 */
     border-radius: 10px; /* 边缘模糊效果 */
     padding: 10px; /* 内边距 */
+    filter: brightness(87.5%); /* 暗蒙版 */
 }
   
 .pl-blur {

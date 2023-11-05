@@ -2675,7 +2675,7 @@ i.anzhiyu-icon-hashtag {
   --btn-color: #fff;
   --btn-bg: var(--anzhiyu-main);
   --text-bg-hover: rgba(93,168,46,0.7);
-  --light-grey: #eee;
+  --light-grey: #fffaf0;
   --dark-grey: #cacaca;
   --white: #fff;
   --text-highlight-color: #1f2d3d;
@@ -10758,6 +10758,7 @@ h1.page-title + .tag-cloud-list {
   margin: 0;
   color: var(--white);
   font-size: 1.85em;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.3);
 }
 @media screen and (min-width: 768px) {
   #page-header #site-title {
@@ -10767,6 +10768,7 @@ h1.page-title + .tag-cloud-list {
 #page-header #site-subtitle {
   color: var(--light-grey);
   font-size: 1.15em;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.4);
 }
 @media screen and (min-width: 768px) {
   #page-header #site-subtitle {
