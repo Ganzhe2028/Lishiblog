@@ -49,6 +49,7 @@
     border-radius: 10px; /* 边缘模糊效果 */
     padding: 10px; /* 内边距 */
     filter: brightness(87.5%); /* 暗蒙版 */
+    transform: scale(1.2); /* 将div放大2倍 */
 }
   
 .pl-blur {
