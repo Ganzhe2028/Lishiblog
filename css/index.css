@@ -11684,11 +11684,6 @@ h1.page-title + .tag-cloud-list {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-transition: background-color 0.5s !important;
-  -moz-transition: background-color 0.5s !important;
-  -o-transition: background-color 0.5s !important;
-  -ms-transition: background-color 0.5s !important;
-  transition: background-color 0.5s !important;
 }
 #nav.hide-menu #toggle-menu .site-page i {
   font-size: 1.35rem;
@@ -11708,15 +11703,10 @@ h1.page-title + .tag-cloud-list {
   padding-bottom: 6px;
   font-size: 0.78em;
   cursor: pointer;
-  -webkit-transition: background-color 0.5s !important;
-  -moz-transition: background-color 0.5s !important;
-  -o-transition: background-color 0.5s !important;
-  -ms-transition: background-color 0.5s !important;
-  transition: background-color 0.5s !important;
 }
 #nav .site-page:hover {
-  color: var(--anzhiyu-white) !important;
-  background-color: #5da82e !important;
+  color: var(--anzhiyu-white);
+  background-color: #5da82e;
 }
 .main-hero-waves-area {
   width: 100%;
@@ -12612,9 +12602,6 @@ h1.page-title + .tag-cloud-list {
 }
 #nav *::after {
   background-color: transparent !important;
-}
-#nav .menus_items .menus_item a {
-  border-radius: 50px;
 }
 #nav .menus_items .menus_item .menus_item_child li a {
   padding: 2px 16px;

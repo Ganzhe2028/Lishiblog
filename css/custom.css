@@ -1,7 +1,42 @@
-/* nav-site-page 渐显优化 */
-.site-page {
-    transition: background-color 0.5s !important; 
-}
-.site-page:hover {
-    background-color: #5da82e !important;
-}
+/* #nav-right a标签 渐显优化 */
+[data-theme="light"]
+    #nav .menus_items .menus_item a {  
+        color: var(--light-grey);  
+        transition: background-color 0.2s !important; 
+    }  
+
+    #nav .menus_items .menus_item a:hover {  
+        color: var(--white);  
+        background-color: #5da32e;
+        background-size: 100%;
+        box-shadow: 0 0 15px rgb(2, 4, 24);
+        z-index: 1;
+    }
+
+    /* #nav .menus_items .menus_item a::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        bottom: -1px;
+        left: -1px;
+        background: inherit;
+        filter: blur(12px);
+        z-index: -1;
+        background-color: #62c326;
+    } */
+
+/* dark模式nav的site-page a标签变为金色（#f2b94b） */
+[data-theme="dark"]
+    #nav .menus_items .menus_item a {  
+        color: var(--light-grey);  
+        transition: background-color 0.2s !important;
+    }  
+    #nav .menus_items .menus_item a > *{
+        box-shadow: inherit !important;
+    }
+
+    #nav .menus_items .menus_item a:hover {  
+        color: var(--white);  
+        background-color: #f2b94b;
+    }
