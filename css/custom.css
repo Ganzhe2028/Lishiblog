@@ -1,30 +1,42 @@
-/* #nav-right a标签 渐显优化 */
+* {
+    margin: 0;  
+    padding: 0; 
+    box-sizing: border-box; 
+}
 [data-theme="light"]
+/* #nav-right a标签 渐显优化 + 周围荧光 */
     #nav .menus_items .menus_item a {  
+        position: relative;  
+        display: inline-block;   
         color: var(--light-grey);  
-        transition: background-color 0.2s !important; 
-    }  
+        transition: background-color 0.2s !important;  
+        cursor: pointer;  
+        text-transform: uppercase;
+    }
 
     #nav .menus_items .menus_item a:hover {  
         color: var(--white);  
-        background-color: #5da32e;
-        background-size: 100%;
-        box-shadow: 0 0 15px rgb(2, 4, 24);
-        z-index: 1;
+        background: #5da32e;  
+        background-size: 400%;  
+        box-shadow: 0 0 15px rgb(2, 4, 24);  
+        z-index: 1; 
     }
 
-    /* #nav .menus_items .menus_item a::before {
-        content: '';
-        position: absolute;
-        top: -1px;
-        right: -1px;
-        bottom: -1px;
-        left: -1px;
-        background: inherit;
-        filter: blur(12px);
-        z-index: -1;
-        background-color: #62c326;
-    } */
+    #nav .menus_items .menus_item a::before {
+        content: '';  
+        position: absolute;  
+        top: 0;  
+        right: 0;  
+        bottom: 0;  
+        left: 0;  
+        background: inherit;  
+        filter: blur(6px);  
+        z-index: -1;  
+        opacity: 1;
+    }
+    .site-page .child .faa-parent .animated-hover {
+
+    }
 
 /* dark模式nav的site-page a标签变为金色（#f2b94b） */
 [data-theme="dark"]
@@ -39,4 +51,17 @@
     #nav .menus_items .menus_item a:hover {  
         color: var(--white);  
         background-color: #f2b94b;
+    }
+
+    #nav .menus_items .menus_item a::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background: inherit;
+        filter: blur(6px);
+        z-index: -1;
+        opacity: 1;
     }
