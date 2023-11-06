@@ -11174,11 +11174,7 @@ h1.page-title + .tag-cloud-list {
 #page-header.nav-fixed #nav #toggle-menu {
   color: var(--font-color);
   text-shadow: none;
-  -webkit-transition: background 0.3s ease-in-out, color 0s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out, color 0s ease-in-out;
-  -o-transition: background 0.3s ease-in-out, color 0s ease-in-out;
-  -ms-transition: background 0.3s ease-in-out, color 0s ease-in-out;
-  transition: background 0.3s ease-in-out, color 0s ease-in-out;
+/* transition: background .3s ease-in-out,color 0s ease-in-out */
 }
 #page-header.nav-fixed #nav #blog_name a,
 #page-header.nav-fixed #nav .mask-name-container a,
@@ -11187,11 +11183,7 @@ h1.page-title + .tag-cloud-list {
 #page-header.nav-fixed #nav #nav-right #toggle-menu a {
   color: var(--font-color);
   text-shadow: none;
-  -webkit-transition: background 0.3s ease-in-out, color 0s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out, color 0s ease-in-out;
-  -o-transition: background 0.3s ease-in-out, color 0s ease-in-out;
-  -ms-transition: background 0.3s ease-in-out, color 0s ease-in-out;
-  transition: background 0.3s ease-in-out, color 0s ease-in-out;
+/* transition: background .3s ease-in-out,color 0s ease-in-out */
 }
 #page-header.nav-fixed #name-container {
   z-index: 101;
@@ -12610,6 +12602,22 @@ h1.page-title + .tag-cloud-list {
 #nav *::after {
   background-color: transparent !important;
 }
+#nav .menus_items .menus_item a:hover {
+  color: var(--white);
+  border-radius: 50px;
+  background-color: #5da82e;
+}
+[data-theme="dark"] #nav .menus_items .menus_item a {
+  border-radius: 50px;
+/* transition: background-color 0.2s !important; */
+}
+[data-theme="dark"] #nav .menus_items .menus_item a:hover {
+  color: var(--white);
+  border-radius: 50px;
+  background-color: #f2b94b;
+*
+}
+*
 #nav .menus_items .menus_item .menus_item_child li a {
   padding: 2px 16px;
   border-radius: 50px;
@@ -12890,11 +12898,7 @@ h1.page-title + .tag-cloud-list {
   padding: 0em 0.8em 0em 1em;
   height: 35px;
   line-height: 35px;
-  -webkit-transition: color 0s !important;
-  -moz-transition: color 0s !important;
-  -o-transition: color 0s !important;
-  -ms-transition: color 0s !important;
-  transition: color 0s !important;
+/* transition: color 0s !important */
 }
 #nav div#toggle-menu {
   padding: 2px 0 4px 6px;
@@ -13386,11 +13390,7 @@ h1.page-title + .tag-cloud-list {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-transition: background 0.3s ease-in-out, color 0s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out, color 0s ease-in-out;
-  -o-transition: background 0.3s ease-in-out, color 0s ease-in-out;
-  -ms-transition: background 0.3s ease-in-out, color 0s ease-in-out;
-  transition: background 0.3s ease-in-out, color 0s ease-in-out;
+/* transition: background 0.3s ease-in-out, color 0s ease-in-out; */
 }
 .nav-fixed #nav-totop #percent,
 .page #nav-totop #percent {
@@ -15817,11 +15817,7 @@ blockquote {
   position: relative;
   padding-left: 0.3rem;
   color: var(--anzhiyu-fontcolor);
-  -webkit-transition: background-color 0.5s !important;
-  -moz-transition: background-color 0.5s !important;
-  -o-transition: background-color 0.5s !important;
-  -ms-transition: background-color 0.5s !important;
-  transition: background-color 0.5s !important;
+/* transition: background-color 0.5s; */
 }
 #sidebar #sidebar-menus .menus_items .site-page i:first-child {
   width: 15%;

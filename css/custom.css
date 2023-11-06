@@ -5,25 +5,27 @@
 }
 [data-theme="light"]
 /* #nav-right a标签 渐显优化 + 周围荧光 */
-    #nav .menus_items .menus_item a {  
-        position: relative;  
-        display: inline-block;   
-        color: var(--light-grey);  
+    div.menus_item > a:first-child {  
+        position: relative;
+        display: inline-block;
+        color: #fff;
         transition: background-color 0.2s !important;  
         cursor: pointer;  
         text-transform: uppercase;
     }
 
-    #nav .menus_items .menus_item a:hover {  
-        color: var(--white);  
-        background: #5da32e;  
+    div.menus_item > a:first-child:hover {  
+        color: #fff !important;  
+        background-color: #5da32e;  
         background-size: 400%;  
         box-shadow: 0 0 15px rgb(2, 4, 24);  
         z-index: 1; 
     }
 
-    #nav .menus_items .menus_item a::before {
-        content: '';  
+    div.menus_item > a:first-child::before {
+        color: #fff !important;
+        cursor: pointer;
+        content: '';
         position: absolute;  
         top: 0;  
         right: 0;  
@@ -33,35 +35,41 @@
         filter: blur(6px);  
         z-index: -1;  
         opacity: 1;
+        border-radius: 15px 15px 15px 15px;
     }
-    .site-page .child .faa-parent .animated-hover {
 
-    }
 
 /* dark模式nav的site-page a标签变为金色（#f2b94b） */
 [data-theme="dark"]
-    #nav .menus_items .menus_item a {  
-        color: var(--light-grey);  
-        transition: background-color 0.2s !important;
+    div.menus_item > a:first-child {  
+        position: relative;
+        display: inline-block;
+        color: #eee;
+        transition: background-color 0.2s !important;  
+        cursor: pointer;  
+        text-transform: uppercase;
     }  
-    #nav .menus_items .menus_item a > *{
-        box-shadow: inherit !important;
+
+    div.menus_item > a:first-child:hover {  
+        color: #eee !important;  
+        background-color: #f2b94b;  
+        background-size: 400%;  
+        box-shadow: 0 0 15px rgb(2, 4, 24);  
+        z-index: 1; 
     }
 
-    #nav .menus_items .menus_item a:hover {  
-        color: var(--white);  
-        background-color: #f2b94b;
-    }
-
-    #nav .menus_items .menus_item a::before {
+    div.menus_item > a:first-child::before {
+        color: #eee !important;
+        cursor: pointer;
         content: '';
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background: inherit;
-        filter: blur(6px);
-        z-index: -1;
+        position: absolute;  
+        top: 0;  
+        right: 0;  
+        bottom: 0;  
+        left: 0;  
+        background: inherit;  
+        filter: blur(6px);  
+        z-index: -1;  
         opacity: 1;
+        border-radius: 15px 15px 15px 15px;
     }
