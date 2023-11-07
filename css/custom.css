@@ -16,7 +16,7 @@
     div.menus_item > a:first-child:hover {  
         cursor: pointer;
         color: #fff !important;  
-        background-color: #5da32e !important;  
+        background-color: #5da32e;  
         background-size: 400%;  
         box-shadow: 0 0 15px rgb(2, 4, 24);  
         z-index: 1; 
@@ -50,7 +50,7 @@
     div.menus_item > a:first-child:hover {  
         color: #eee !important;  
         cursor: pointer;
-        background-color: #f2b94b;  
+        background-color: #f2b94b !important;  
         background-size: 400%;  
         box-shadow: 0 0 15px rgb(2, 4, 24);  
         z-index: 1; 
