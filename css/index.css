@@ -8084,11 +8084,11 @@ body:has(#console.show) #nav-music {
   font-size: 14px;
 }
 #anMusic-page meting-js .aplayer ol > li:hover {
-  background: #5da32e;
+  background: rgba(255,255,255,0.2);
   border-radius: 6px;
 }
 #anMusic-page meting-js .aplayer ol > li.aplayer-list-light {
-  background: #5da32e;
+  background: rgba(255,255,255,0.2);
   border-radius: 6px;
   padding: 20px 15px;
 }
