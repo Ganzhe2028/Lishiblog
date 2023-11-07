@@ -13,15 +13,14 @@
         cursor: pointer;  
         text-transform: uppercase;
     }
-
     div.menus_item > a:first-child:hover {  
+        cursor: pointer;
         color: #fff !important;  
-        background-color: #5da32e;  
+        background-color: #5da32e !important;  
         background-size: 400%;  
         box-shadow: 0 0 15px rgb(2, 4, 24);  
         z-index: 1; 
     }
-
     div.menus_item > a:first-child::before {
         color: #fff !important;
         cursor: pointer;
@@ -38,7 +37,6 @@
         border-radius: 15px 15px 15px 15px;
     }
 
-
 /* dark模式nav的site-page a标签变为金色（#f2b94b） */
 [data-theme="dark"]
     div.menus_item > a:first-child {  
@@ -49,15 +47,14 @@
         cursor: pointer;  
         text-transform: uppercase;
     }  
-
     div.menus_item > a:first-child:hover {  
         color: #eee !important;  
+        cursor: pointer;
         background-color: #f2b94b;  
         background-size: 400%;  
         box-shadow: 0 0 15px rgb(2, 4, 24);  
         z-index: 1; 
     }
-
     div.menus_item > a:first-child::before {
         color: #eee !important;
         cursor: pointer;
@@ -72,4 +69,9 @@
         z-index: -1;  
         opacity: 1;
         border-radius: 15px 15px 15px 15px;
+    }
+
+    /* subtitle-dark 增亮 */
+    #page-header #site-subtitle {
+        color: rgba(255, 255, 255, 1) !important;
     }

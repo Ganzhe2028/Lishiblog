@@ -42,16 +42,25 @@
       opacity: 1;
     }
 }
-  
-.pl-visible {
+
+[data-theme="light"]
+  .pl-visible {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, .2); /* 透明度为0.5，颜色为淡黑色 */
+      border-radius: 10px; /* 边缘模糊效果 */
+      padding: 10px; /* 内边距 */
+      filter: brightness(87.5%); /* 暗蒙版 */
+      transform: scale(1.2); /* 将div放大2倍 */
+  }
+[data-theme="dark"]
+  .pl-visible {
     opacity: 1;
     background-color: rgba(0, 0, 0, .2); /* 透明度为0.5，颜色为淡黑色 */
     border-radius: 10px; /* 边缘模糊效果 */
     padding: 10px; /* 内边距 */
-    filter: brightness(87.5%); /* 暗蒙版 */
     transform: scale(1.2); /* 将div放大2倍 */
-}
-  
+  }
+
 .pl-blur {
     /* 小图锯齿多，增加高斯模糊 */
     filter: blur(50px);

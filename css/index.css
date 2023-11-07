@@ -8084,11 +8084,11 @@ body:has(#console.show) #nav-music {
   font-size: 14px;
 }
 #anMusic-page meting-js .aplayer ol > li:hover {
-  background: rgba(255,255,255,0.2);
+  background: #5da32e;
   border-radius: 6px;
 }
 #anMusic-page meting-js .aplayer ol > li.aplayer-list-light {
-  background: rgba(255,255,255,0.2);
+  background: #5da32e;
   border-radius: 6px;
   padding: 20px 15px;
 }
@@ -17687,7 +17687,7 @@ kbd {
 .introduction-card .introduction-card-bottom .left .info .subTitle {
   line-height: 14px;
   font-size: 14px;
-  color: var(--anzhiyu-gray);
+/* color: var(--anzhiyu-gray); */
   opacity: 0.8;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
   filter: alpha(opacity=80);
