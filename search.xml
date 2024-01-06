@@ -381,33 +381,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="/css/cursor.css"/>
-      <url>/css/cursor.css</url>
-      
-        <content type="html"><![CDATA[/* 鼠标样式 */#cursor {    position: fixed;    width: 16px;    height: 16px;    /* 这里改变跟随的底色 */    background: #6DC436;    border-radius: 8px;    opacity: 0.25;    z-index: 10086;    pointer-events: none;    transition: 0.2s ease-in-out;    transition-property: background, opacity, transform;  }    #cursor.hidden {    opacity: 0;  }    #cursor.hover {    opacity: 0.1;    transform: scale(2.5);    -webkit-transform: scale(2.5);    -moz-transform: scale(2.5);    -ms-transform: scale(2.5);    -o-transform: scale(2.5);  }    #cursor.active {    opacity: 0.5;    transform: scale(0.5);    -webkit-transform: scale(0.5);    -moz-transform: scale(0.5);    -ms-transform: scale(0.5);    -o-transform: scale(0.5);  }]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
-      
-        <content type="html"><![CDATA[* {    margin: 0;      padding: 0;     box-sizing: border-box; }#page-header #site-subtitle {    color: rgba(255, 255, 255, 1) !important;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>便携小空调 - 为你的夏日带去清凉!</title>
       <link href="/air-conditioner/index.html"/>
       <url>/air-conditioner/index.html</url>
       
         <content type="html"><![CDATA[<blockquote><p>终于为博客安装上了便携小空调</p></blockquote><style>.copyright-box a {  border-bottom: none !important;  padding: 0 !important;}</style><div id="air-conditioner-vue"></div><script defer data-pjax src='https://npm.elemecdn.com/anzhiyu-air-conditioner@1.0.1/index.3f125bc6.js'></script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>文章分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -448,43 +437,10 @@
     
     <entry>
       <title></title>
-      <link href="/js/custom.js"/>
-      <url>/js/custom.js</url>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
       
-        <content type="html"><![CDATA[// page情况下的site-page-fiexdwindow.onload = function() {      var site_page = document.querySelector('#menus > div.menus_items > div > a');    if (window.getComputedStyle(site_page).backgroundColor === '#5da32e') {          site_page.style.color = '#fff';        site_page.setAttribute('style', 'color: #fff;');    }  };  ]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/imgloaded.css"/>
-      <url>/css/imgloaded.css</url>
-      
-        <content type="html"><![CDATA[/* 首页头图加载 */.pl-container {    width: 100%;    height: 100%;    position: relative;    overflow: hidden;    will-change: transform; /* 添加性能优化 */    animation: blur-to-clear 2s cubic-bezier(.62,.21,.25,1) 0s 1 normal backwards running, scale 1.5s cubic-bezier(.62,.21,.25,1) 0s 1 both;  }.pl-img {    width: 100%;    height: 100%;    position: absolute;    background-position: center;    background-size: cover;    background-color: rgba(0, 0, 0, 0.2); /* 透明度为0.5，颜色为淡黑色 */    border-radius: 10px; /* 边缘模糊效果 */    padding: 10px; /* 内边距 */    background-repeat: no-repeat;    opacity: 0;    transition: opacity 1s;}  @keyframes blur-to-clear {    0% {      filter: blur(50px);      opacity: 1;    }    100% {      filter: blur(0);      opacity: 1;    }}  @keyframes scale {    0% {      transform: scale(1.5) translateZ(0);      opacity: 0;    }    to {      transform: scale(1) translateZ(0);      opacity: 1;    }}[data-theme="light"]  .pl-visible {      opacity: 1;      background-color: rgba(0, 0, 0, .2); /* 透明度为0.5，颜色为淡黑色 */      border-radius: 10px; /* 边缘模糊效果 */      padding: 10px; /* 内边距 */      filter: brightness(87.5%); /* 暗蒙版 */      transform: scale(1.2); /* 将div放大2倍 */  }[data-theme="dark"]  .pl-visible {    opacity: 1;    background-color: rgba(0, 0, 0, .2); /* 透明度为0.5，颜色为淡黑色 */    border-radius: 10px; /* 边缘模糊效果 */    padding: 10px; /* 内边距 */    filter: brightness(100%);    transform: scale(1.2); /* 将div放大2倍 */  }.pl-blur {    /* 小图锯齿多，增加高斯模糊 */    filter: blur(50px);}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/js/imgloaded.js"/>
-      <url>/js/imgloaded.js</url>
-      
-        <content type="html"><![CDATA[// 首页头图加载优化/** * @description 实现medium的渐进加载背景的效果 */class ProgressiveLoad {    constructor(smallSrc, largeSrc) {      this.smallSrc = smallSrc;      this.largeSrc = largeSrc;      this.initTpl();    }      /**     * @description 生成ui模板     */    initTpl() {      this.container = document.createElement('div');      this.smallStage = document.createElement('div');      this.largeStage = document.createElement('div');      this.smallImg = new Image();      this.largeImg = new Image();      this.container.className = 'pl-container';      this.smallStage.className = 'pl-img pl-blur';      this.largeStage.className = 'pl-img';      this.container.appendChild(this.smallStage);      this.container.appendChild(this.largeStage);      this.smallImg.onload = this._onSmallLoaded.bind(this);      this.largeImg.onload = this._onLargeLoaded.bind(this);    }      /**     * @description 加载背景     */    progressiveLoad() {      this.smallImg.src = this.smallSrc;      this.largeImg.src = this.largeSrc;    }      /**     * @description 大图加载完成     */    _onLargeLoaded() {      this.largeStage.classList.add('pl-visible');      this.largeStage.style.backgroundImage = `url('${this.largeSrc}')`;    }      /**     * @description 小图加载完成     */    _onSmallLoaded() {      this.smallStage.classList.add('pl-visible');      this.smallStage.style.backgroundImage = `url('${this.smallSrc}')`;    }  }    const executeLoad = (config, target) => {    console.log('执行渐进背景替换');    const isMobile = window.matchMedia('(max-width: 767px)').matches;    const loader = new ProgressiveLoad(      isMobile ? config.mobileSmallSrc : config.smallSrc,      isMobile ? config.mobileLargeSrc : config.largeSrc    );    // 和背景图颜色保持一致，防止高斯模糊后差异较大    if (target.children[0]) {      target.insertBefore(loader.container, target.children[0]);    }    loader.progressiveLoad();  };    const config = {    smallSrc: 'https://img01.anheyu.com/useruploads/151/2023/11/02/65439160c2181.webp', // 小图链接 尽可能配置小于100k的图片    largeSrc: 'https://img01.anheyu.com/useruploads/151/2023/11/03/65450c57436bc.webp', // 大图链接 最终显示的图片    mobileSmallSrc: 'https://img01.anheyu.com/useruploads/151/2023/11/03/65450f9a3279e.jpg', // 手机端小图链接 尽可能配置小于100k的图片    mobileLargeSrc: 'https://img01.anheyu.com/useruploads/151/2023/11/03/65450f82e7ec6.jpg', // 手机端大图链接 最终显示的图片    enableRoutes: ['/'],    };  function initProgressiveLoad(config) {    const target = document.getElementById('page-header');    if (target && target.classList.contains('full_page')) {      executeLoad(config, target);    }  }    function onPJAXComplete(config) {    const target = document.getElementById('page-header');    if (target && target.classList.contains('full_page')) {      initProgressiveLoad(config);    }  }  document.addEventListener("DOMContentLoaded", function() {    initProgressiveLoad(config);  });    document.addEventListener("pjax:complete", function() {    onPJAXComplete(config);  });]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>文章分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[* {    margin: 0;      padding: 0;     box-sizing: border-box; }#page-header #site-subtitle {    color: rgba(255, 255, 255, 1) !important;}]]></content>
       
     </entry>
     
@@ -502,22 +458,11 @@
     
     
     <entry>
-      <title>音乐馆</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>link</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="我的友链："><a href="#我的友链：" class="headerlink" title="我的友链："></a>我的友链：</h2><div class="tabs" id="test1"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="test1-1">🦋butterfly、🐟AnZhiYu</button><button type="button" class="tab " data-href="test1-2">通用格式</button></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Ganzhe</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://ganzhe.site/</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://pic.imgdb.cn/item/64895d391ddac507cce97bc3.webp</span></span><br><span class="line">  <span class="attr">descr:</span> <span class="string">顺其自然，持之以恒</span></span><br><span class="line">  <span class="attr">siteshot:</span> <span class="string">https://img01.anheyu.com/useruploads/151/2023/07/15/64b2525d6c65f.webp</span></span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="test1-2"><p><mark class="hl-label blue">名称：</mark> Ganzhe</p><p><mark class="hl-label blue">链接：</mark> <a href="https://ganzhe.site/">https://ganzhe.site/</a></p><p><mark class="hl-label blue">头像：</mark> <a href="https://pic.imgdb.cn/item/64895d391ddac507cce97bc3.webp">https://pic.imgdb.cn/item/64895d391ddac507cce97bc3.webp</a></p><p><mark class="hl-label blue">描述：</mark> 顺其自然，持之以恒</p><p><mark class="hl-label blue">站点截图：</mark> <a href="https://img01.anheyu.com/useruploads/151/2023/07/15/64b2525d6c65f.webp">https://img01.anheyu.com/useruploads/151/2023/07/15/64b2525d6c65f.webp</a></p></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><details class="folding-tag" ><summary> 免责声明 </summary>              <div class='content'>              <p>本博客遵守中华人民共和国相关法律。本页内容仅作为方便学习而产生的快速链接的链接方式，对与友情链接中存在的链接、好文推荐链接等均为其他网站。我本人能力有限无法逐个甄别每篇文章的每个字，并无法获知是否在收录后原作者是否对链接增加了违反法律甚至其他破坏用户计算机等行为。因为部分友链网站甚至没有做备案、域名并未做实名认证等，所以友链网站均可能存在风险，请你须知。</p><h2 id="所以在我力所能及的情况下，我会包括但不限于："><a href="#所以在我力所能及的情况下，我会包括但不限于：" class="headerlink" title="所以在我力所能及的情况下，我会包括但不限于："></a>所以在我力所能及的情况下，我会包括但不限于：</h2><ul><li>针对收录的博客中的绝大多数内容通过标题来鉴别是否存在有风险的内容；</li><li>在收录的友链好文推荐中检查是否存在风险内容；</li></ul><h2 id="但是你在访问的时候，仍然无法避免，包括但不限于："><a href="#但是你在访问的时候，仍然无法避免，包括但不限于：" class="headerlink" title="但是你在访问的时候，仍然无法避免，包括但不限于："></a>但是你在访问的时候，仍然无法避免，包括但不限于：</h2><ol><li>作者更换了超链接的指向，替换成了其他内容</li><li>作者的服务器被恶意攻击、劫持、被注入恶意内容</li><li>作者的域名到期，被不法分子用作他用</li><li>作者修改了文章内容，增加钓鱼网站、广告等无效信息</li><li>不完善的隐私保护对用户的隐私造成了侵害、泄漏</li><li>最新文章部分为机器抓取，本站作者未经过任何审核和筛选，本着友链信任原则添加的。如果你发现其中包含违反中华人民共和国法律的内容，请及时联系和举报。该友链会被拉黑。</li></ol><p>如果因为从本页跳转给你造成了损失，深表歉意，并且建议用户如果发现存在问题在本页面进行回复。通常会很快处理。<br>如果长时间无法得到处理，建议联系<strong><a href="mailto:&#49;&#57;&#53;&#57;&#x30;&#x30;&#54;&#49;&#x36;&#57;&#x40;&#113;&#x71;&#46;&#99;&#111;&#109;">&#49;&#57;&#53;&#57;&#x30;&#x30;&#54;&#49;&#x36;&#57;&#x40;&#113;&#x71;&#46;&#99;&#111;&#109;</a></strong>、<a href="mailto:&#x67;&#x7a;&#x74;&#x78;&#119;&#x64;&#x32;&#x30;&#x30;&#x38;&#x32;&#56;&#x40;&#x71;&#113;&#46;&#x63;&#111;&#x6d;">&#x67;&#x7a;&#x74;&#x78;&#119;&#x64;&#x32;&#x30;&#x30;&#x38;&#x32;&#56;&#x40;&#x71;&#113;&#46;&#x63;&#111;&#x6d;</a>或<a href="mailto:&#103;&#97;&#110;&#x7a;&#x68;&#x65;&#46;&#x36;&#50;&#x38;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#103;&#97;&#110;&#x7a;&#x68;&#x65;&#46;&#x36;&#50;&#x38;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a></p>              </div>            </details><details class="folding-tag" ><summary> 本站添加的友链要求 </summary>              <div class='content'>              <ol><li>能够正常访问</li><li>含本站友链</li><li>网站类型为个人博客<br>评论申请后在我不忙的时候会统一添加，即使不通过也会给予邮件回复。<div class="note warning flat"><ol><li>你提交的信息有可能被修改。如果有修改，我会将修改内容进行告知</li><li>为了友链相关页面和组件的统一性和美观性，可能会对你的昵称进行缩短处理，例如昵称包含博客、XX 的 XX等内容或形式将被简化。</li><li>为了图片加载速度和内容安全性考虑，头像实际展示图片均使用博客自己图床，所以无法收到贵站自己的头像更新，如果有迫切的更改信息需求，请在本页的评论中添加。</li><li>为了保证鱼塘能够正确抓取文章，所有的友链链接要求为<mark class="hl-label blue">博客主页链接，而不是个人主页链接</mark> 。</li><li>为了避免图床问题，<strong>请确保没有防盗链</strong>（总之我能放到图床上即可）。</li></ol></div></li></ol>              </div>            </details><h1 id="申请友链"><a href="#申请友链" class="headerlink" title="申请友链"></a>申请友链</h1><ul><li>默认格式解释：<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span>     <span class="string">你的昵称（请勿包含博客等字样）。</span></span><br><span class="line">  <span class="attr">link:</span>     <span class="string">网站地址（要求博客地址，请勿提交个人主页）。</span></span><br><span class="line">  <span class="attr">avatar:</span>   <span class="string">网站头像图片url（请尽量提供webp格式的压缩图片，我会上传到自己的图床）。</span></span><br><span class="line">  <span class="attr">descr:</span>    <span class="string">网站描述、座右铭等。</span></span><br><span class="line">  <span class="attr">siteshot:</span> <span class="string">（选填）自选或自制的图片，站点截图会通过api生成，也可以自定义。</span></span><br></pre></td></tr></table></figure><p style="padding:0 0 0 .8rem">  请<strong>勾选</strong>你符合的条件：</p><div id="friendlink_checkboxs" style="padding:0 0 0 1.6rem">  <p>      <label class="checkbox">          <input type="checkbox" id="checkbox1" onclick="checkForm()">          我已添加 <b>Ganzhe</b> 博客的友情链接      </label>  </p>  <p>      <label class="checkbox">          <input type="checkbox" id="checkbox2" onclick="checkForm()">          我的链接主体为 <b>个人</b>，网站类型为<b>博客</b>      </label>  </p>  <p>      <label class="checkbox">          <input type="checkbox" id="checkbox3" onclick="checkForm()">我提供的<b>博客头像</b>为<b>.webp格式</b>      </label>  </p>  <p>      <label class="checkbox">          <input type="checkbox" id="checkbox3" onclick="checkForm()">网站现在可以在中国大陆区域正常访问      </label>  </p>  <p>      <label class="checkbox">          <input type="checkbox" id="checkbox4" onclick="checkForm()">网站内容符合中国大陆法律法规      </label>  </p>  <p>      <label class="checkbox">          <input type="checkbox" id="checkbox5" onclick="checkForm()">网站正常可以在15s内加载完成首屏      </label>  </p></div><script>  var twikooSubmit = document.getElementsByClassName("tk-submit")[0];  if (twikooSubmit) {      twikooSubmit.style.opacity = "0";  }  function checkForm() {      var checkbox1 = document.getElementById("checkbox1");      var checkbox2 = document.getElementById("checkbox2");      var checkbox3 = document.getElementById("checkbox3");      var checkbox4 = document.getElementById("checkbox4");      var checkbox5 = document.getElementById("checkbox5");      var twikooSubmit = document.getElementsByClassName("tk-submit")[0];      if (checkbox1.checked && checkbox2.checked && checkbox3.checked && checkbox4.checked && checkbox5.checked) {          twikooSubmit.style.opacity = "1";          twikooSubmit.style.height = "auto";          twikooSubmit.style.overflow = "auto";          var input = document.getElementsByClassName('el-textarea__inner')[0];          let evt = document.createEvent('HTMLEvents');          evt.initEvent('input', true, true);          input.value = '已加贵站友链，一起进步！\n```yaml\n- name: \n  link: \n  avatar: \n  descr: \n```';          input.dispatchEvent(evt);          input.focus();          input.setSelectionRange(-1, -1);      } else {          twikooSubmit.style.opacity = "0";          twikooSubmit.style.height = "0";          twikooSubmit.style.overflow = "hidden";      }  }</script><style>  .tk-comments > .tk-submit {      opacity: 0;      height: 0;      transition: opacity .5s, height .5s;      overflow: hidden;  }</style></li></ul><div class="note success flat"><p>确定自己的博客符合以上条件后，直接在评论框的默认文字后填写补充对应信息📋即可（缩进空格我都已经默认好了）：</p></div>]]></content>
+        <content type="html"><![CDATA[<h2 id="我的友链："><a href="#我的友链：" class="headerlink" title="我的友链："></a>我的友链：</h2><div class="tabs" id="test1"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="test1-1">🦋butterfly、🐟AnZhiYu</button><button type="button" class="tab " data-href="test1-2">通用格式</button></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Ganzhe</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://ganzhe.site/</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://pic.imgdb.cn/item/64895d391ddac507cce97bc3.webp</span></span><br><span class="line">  <span class="attr">descr:</span> <span class="string">顺其自然，持之以恒</span></span><br><span class="line">  <span class="attr">siteshot:</span> <span class="string">https://img01.anheyu.com/useruploads/151/2023/07/15/64b2525d6c65f.webp</span></span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="test1-2"><p><mark class="hl-label blue">名称：</mark> Ganzhe</p><p><mark class="hl-label blue">链接：</mark> <a href="https://ganzhe.site/">https://ganzhe.site/</a></p><p><mark class="hl-label blue">头像：</mark> <a href="https://pic.imgdb.cn/item/64895d391ddac507cce97bc3.webp">https://pic.imgdb.cn/item/64895d391ddac507cce97bc3.webp</a></p><p><mark class="hl-label blue">描述：</mark> 顺其自然，持之以恒</p><p><mark class="hl-label blue">站点截图：</mark> <a href="https://img01.anheyu.com/useruploads/151/2023/07/15/64b2525d6c65f.webp">https://img01.anheyu.com/useruploads/151/2023/07/15/64b2525d6c65f.webp</a></p></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><details class="folding-tag" ><summary> 免责声明 </summary>              <div class='content'>              <p>本博客遵守中华人民共和国相关法律。本页内容仅作为方便学习而产生的快速链接的链接方式，对与友情链接中存在的链接、好文推荐链接等均为其他网站。我本人能力有限无法逐个甄别每篇文章的每个字，并无法获知是否在收录后原作者是否对链接增加了违反法律甚至其他破坏用户计算机等行为。因为部分友链网站甚至没有做备案、域名并未做实名认证等，所以友链网站均可能存在风险，请你须知。</p><h2 id="所以在我力所能及的情况下，我会包括但不限于："><a href="#所以在我力所能及的情况下，我会包括但不限于：" class="headerlink" title="所以在我力所能及的情况下，我会包括但不限于："></a>所以在我力所能及的情况下，我会包括但不限于：</h2><ul><li>针对收录的博客中的绝大多数内容通过标题来鉴别是否存在有风险的内容；</li><li>在收录的友链好文推荐中检查是否存在风险内容；</li></ul><h2 id="但是你在访问的时候，仍然无法避免，包括但不限于："><a href="#但是你在访问的时候，仍然无法避免，包括但不限于：" class="headerlink" title="但是你在访问的时候，仍然无法避免，包括但不限于："></a>但是你在访问的时候，仍然无法避免，包括但不限于：</h2><ol><li>作者更换了超链接的指向，替换成了其他内容</li><li>作者的服务器被恶意攻击、劫持、被注入恶意内容</li><li>作者的域名到期，被不法分子用作他用</li><li>作者修改了文章内容，增加钓鱼网站、广告等无效信息</li><li>不完善的隐私保护对用户的隐私造成了侵害、泄漏</li><li>最新文章部分为机器抓取，本站作者未经过任何审核和筛选，本着友链信任原则添加的。如果你发现其中包含违反中华人民共和国法律的内容，请及时联系和举报。该友链会被拉黑。</li></ol><p>如果因为从本页跳转给你造成了损失，深表歉意，并且建议用户如果发现存在问题在本页面进行回复。通常会很快处理。<br>如果长时间无法得到处理，建议联系<strong><a href="mailto:&#x31;&#x39;&#x35;&#57;&#48;&#x30;&#x36;&#49;&#54;&#x39;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;">&#x31;&#x39;&#x35;&#57;&#48;&#x30;&#x36;&#49;&#54;&#x39;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;</a></strong>、<a href="mailto:&#103;&#x7a;&#116;&#120;&#x77;&#100;&#x32;&#48;&#48;&#x38;&#50;&#x38;&#64;&#113;&#x71;&#46;&#99;&#x6f;&#109;">&#103;&#x7a;&#116;&#120;&#x77;&#100;&#x32;&#48;&#48;&#x38;&#50;&#x38;&#64;&#113;&#x71;&#46;&#99;&#x6f;&#109;</a>或<a href="mailto:&#103;&#x61;&#110;&#122;&#104;&#x65;&#46;&#54;&#x32;&#56;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#103;&#x61;&#110;&#122;&#104;&#x65;&#46;&#54;&#x32;&#56;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a></p>              </div>            </details><details class="folding-tag" ><summary> 本站添加的友链要求 </summary>              <div class='content'>              <ol><li>能够正常访问</li><li>含本站友链</li><li>网站类型为个人博客<br>评论申请后在我不忙的时候会统一添加，即使不通过也会给予邮件回复。<div class="note warning flat"><ol><li>你提交的信息有可能被修改。如果有修改，我会将修改内容进行告知</li><li>为了友链相关页面和组件的统一性和美观性，可能会对你的昵称进行缩短处理，例如昵称包含博客、XX 的 XX等内容或形式将被简化。</li><li>为了图片加载速度和内容安全性考虑，头像实际展示图片均使用博客自己图床，所以无法收到贵站自己的头像更新，如果有迫切的更改信息需求，请在本页的评论中添加。</li><li>为了保证鱼塘能够正确抓取文章，所有的友链链接要求为<mark class="hl-label blue">博客主页链接，而不是个人主页链接</mark> 。</li><li>为了避免图床问题，<strong>请确保没有防盗链</strong>（总之我能放到图床上即可）。</li></ol></div></li></ol>              </div>            </details><h1 id="申请友链"><a href="#申请友链" class="headerlink" title="申请友链"></a>申请友链</h1><ul><li>默认格式解释：<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span>     <span class="string">你的昵称（请勿包含博客等字样）。</span></span><br><span class="line">  <span class="attr">link:</span>     <span class="string">网站地址（要求博客地址，请勿提交个人主页）。</span></span><br><span class="line">  <span class="attr">avatar:</span>   <span class="string">网站头像图片url（请尽量提供webp格式的压缩图片，我会上传到自己的图床）。</span></span><br><span class="line">  <span class="attr">descr:</span>    <span class="string">网站描述、座右铭等。</span></span><br><span class="line">  <span class="attr">siteshot:</span> <span class="string">（选填）自选或自制的图片，站点截图会通过api生成，也可以自定义。</span></span><br></pre></td></tr></table></figure><p style="padding:0 0 0 .8rem">  请<strong>勾选</strong>你符合的条件：</p><div id="friendlink_checkboxs" style="padding:0 0 0 1.6rem">  <p>      <label class="checkbox">          <input type="checkbox" id="checkbox1" onclick="checkForm()">          我已添加 <b>Ganzhe</b> 博客的友情链接      </label>  </p>  <p>      <label class="checkbox">          <input type="checkbox" id="checkbox2" onclick="checkForm()">          我的链接主体为 <b>个人</b>，网站类型为<b>博客</b>      </label>  </p>  <p>      <label class="checkbox">          <input type="checkbox" id="checkbox3" onclick="checkForm()">我提供的<b>博客头像</b>为<b>.webp格式</b>      </label>  </p>  <p>      <label class="checkbox">          <input type="checkbox" id="checkbox3" onclick="checkForm()">网站现在可以在中国大陆区域正常访问      </label>  </p>  <p>      <label class="checkbox">          <input type="checkbox" id="checkbox4" onclick="checkForm()">网站内容符合中国大陆法律法规      </label>  </p>  <p>      <label class="checkbox">          <input type="checkbox" id="checkbox5" onclick="checkForm()">网站正常可以在15s内加载完成首屏      </label>  </p></div><script>  var twikooSubmit = document.getElementsByClassName("tk-submit")[0];  if (twikooSubmit) {      twikooSubmit.style.opacity = "0";  }  function checkForm() {      var checkbox1 = document.getElementById("checkbox1");      var checkbox2 = document.getElementById("checkbox2");      var checkbox3 = document.getElementById("checkbox3");      var checkbox4 = document.getElementById("checkbox4");      var checkbox5 = document.getElementById("checkbox5");      var twikooSubmit = document.getElementsByClassName("tk-submit")[0];      if (checkbox1.checked && checkbox2.checked && checkbox3.checked && checkbox4.checked && checkbox5.checked) {          twikooSubmit.style.opacity = "1";          twikooSubmit.style.height = "auto";          twikooSubmit.style.overflow = "auto";          var input = document.getElementsByClassName('el-textarea__inner')[0];          let evt = document.createEvent('HTMLEvents');          evt.initEvent('input', true, true);          input.value = '已加贵站友链，一起进步！\n```yaml\n- name: \n  link: \n  avatar: \n  descr: \n```';          input.dispatchEvent(evt);          input.focus();          input.setSelectionRange(-1, -1);      } else {          twikooSubmit.style.opacity = "0";          twikooSubmit.style.height = "0";          twikooSubmit.style.overflow = "hidden";      }  }</script><style>  .tk-comments > .tk-submit {      opacity: 0;      height: 0;      transition: opacity .5s, height .5s;      overflow: hidden;  }</style></li></ul><div class="note success flat"><p>确定自己的博客符合以上条件后，直接在评论框的默认文字后填写补充对应信息📋即可（缩进空格我都已经默认好了）：</p></div>]]></content>
       
     </entry>
     
@@ -525,10 +470,21 @@
     
     <entry>
       <title></title>
-      <link href="/news/index.html"/>
-      <url>/news/index.html</url>
+      <link href="/css/cursor.css"/>
+      <url>/css/cursor.css</url>
       
-        <content type="html"><![CDATA[<table><thead><tr><th>热点新闻</th></tr></thead><tbody><tr><td><a href="https://www.zaobao.com/realtime/china/story20231013-1442491">下午察：中国遣返脱北者背后</a></td></tr><tr><td><a href="https://www.zaobao.com/realtime/china/story20231014-1442539">中国全国人大常委会下周开会 议程包括审议任免案</a></td></tr><tr><td><a href="https://www.zaobao.com/news/china/story20231013-1442507">以色列驻华使馆人员家属北京遇袭 原因未明</a></td></tr><tr><td><a href="https://www.zaobao.com/news/world/story20231013-1442531">促美国管好以色列 伊朗：若对加沙战争罪行持续 轴心国将回应</a></td></tr><tr><td><a href="https://www.zaobao.com/news/world/story20231013-1442484">分析：哈马斯袭击以色列是致命错误 </a></td></tr><tr><td><a href="https://www.zaobao.com/news/china/story20231014-1442460">新闻人间：郑强人红是非多</a></td></tr><tr><td><a href="https://www.zaobao.com/news/china/story20231013-1442489">驾车冲撞中国驻旧金山领事馆 山东男子居所内发现政治暗杀类书籍</a></td></tr><tr><td><a href="https://www.zaobao.com/finance/china/story20231013-1442494">中国走出通缩阴影 但市场对经济仍信心不足</a></td></tr><tr><td><a href="https://www.zaobao.com/news/china/story20231013-1442519">博雷利：欧洲将以建设性和负责任方式管理对华关系</a></td></tr><tr><td><a href="https://www.zaobao.com/realtime/china/story20231013-1442486">北京警方：扎伤以色列外交人员家属外籍嫌犯已被抓</a></td></tr></tbody></table>]]></content>
+        <content type="html"><![CDATA[/* 鼠标样式 */#cursor {    position: fixed;    width: 16px;    height: 16px;    /* 这里改变跟随的底色 */    background: #6DC436;    border-radius: 8px;    opacity: 0.25;    z-index: 10086;    pointer-events: none;    transition: 0.2s ease-in-out;    transition-property: background, opacity, transform;  }    #cursor.hidden {    opacity: 0;  }    #cursor.hover {    opacity: 0.1;    transform: scale(2.5);    -webkit-transform: scale(2.5);    -moz-transform: scale(2.5);    -ms-transform: scale(2.5);    -o-transform: scale(2.5);  }    #cursor.active {    opacity: 0.5;    transform: scale(0.5);    -webkit-transform: scale(0.5);    -moz-transform: scale(0.5);    -ms-transform: scale(0.5);    -o-transform: scale(0.5);  }]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/imgloaded.css"/>
+      <url>/css/imgloaded.css</url>
+      
+        <content type="html"><![CDATA[/* 首页头图加载 */.pl-container {    width: 100%;    height: 100%;    position: relative;    overflow: hidden;    will-change: transform; /* 添加性能优化 */    animation: blur-to-clear 2s cubic-bezier(.62,.21,.25,1) 0s 1 normal backwards running, scale 1.5s cubic-bezier(.62,.21,.25,1) 0s 1 both;  }.pl-img {    width: 100%;    height: 100%;    position: absolute;    background-position: center;    background-size: cover;    background-color: rgba(0, 0, 0, 0.2); /* 透明度为0.5，颜色为淡黑色 */    border-radius: 10px; /* 边缘模糊效果 */    padding: 10px; /* 内边距 */    background-repeat: no-repeat;    opacity: 0;    transition: opacity 1s;}  @keyframes blur-to-clear {    0% {      filter: blur(50px);      opacity: 1;    }    100% {      filter: blur(0);      opacity: 1;    }}  @keyframes scale {    0% {      transform: scale(1.5) translateZ(0);      opacity: 0;    }    to {      transform: scale(1) translateZ(0);      opacity: 1;    }}[data-theme="light"]  .pl-visible {      opacity: 1;      background-color: rgba(0, 0, 0, .2); /* 透明度为0.5，颜色为淡黑色 */      border-radius: 10px; /* 边缘模糊效果 */      padding: 10px; /* 内边距 */      filter: brightness(87.5%); /* 暗蒙版 */      transform: scale(1.2); /* 将div放大2倍 */  }[data-theme="dark"]  .pl-visible {    opacity: 1;    background-color: rgba(0, 0, 0, .2); /* 透明度为0.5，颜色为淡黑色 */    border-radius: 10px; /* 边缘模糊效果 */    padding: 10px; /* 内边距 */    filter: brightness(100%);    transform: scale(1.2); /* 将div放大2倍 */  }.pl-blur {    /* 小图锯齿多，增加高斯模糊 */    filter: blur(50px);}]]></content>
       
     </entry>
     
@@ -546,9 +502,9 @@
     
     
     <entry>
-      <title>文章标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>理实活动</title>
+      <link href="/wordScenery/index.html"/>
+      <url>/wordScenery/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -557,9 +513,20 @@
     
     
     <entry>
-      <title>理实活动</title>
-      <link href="/wordScenery/index.html"/>
-      <url>/wordScenery/index.html</url>
+      <title></title>
+      <link href="/news/index.html"/>
+      <url>/news/index.html</url>
+      
+        <content type="html"><![CDATA[<table><thead><tr><th>热点新闻</th></tr></thead><tbody><tr><td><a href="https://www.zaobao.com/realtime/china/story20231013-1442491">下午察：中国遣返脱北者背后</a></td></tr><tr><td><a href="https://www.zaobao.com/realtime/china/story20231014-1442539">中国全国人大常委会下周开会 议程包括审议任免案</a></td></tr><tr><td><a href="https://www.zaobao.com/news/china/story20231013-1442507">以色列驻华使馆人员家属北京遇袭 原因未明</a></td></tr><tr><td><a href="https://www.zaobao.com/news/world/story20231013-1442531">促美国管好以色列 伊朗：若对加沙战争罪行持续 轴心国将回应</a></td></tr><tr><td><a href="https://www.zaobao.com/news/world/story20231013-1442484">分析：哈马斯袭击以色列是致命错误 </a></td></tr><tr><td><a href="https://www.zaobao.com/news/china/story20231014-1442460">新闻人间：郑强人红是非多</a></td></tr><tr><td><a href="https://www.zaobao.com/news/china/story20231013-1442489">驾车冲撞中国驻旧金山领事馆 山东男子居所内发现政治暗杀类书籍</a></td></tr><tr><td><a href="https://www.zaobao.com/finance/china/story20231013-1442494">中国走出通缩阴影 但市场对经济仍信心不足</a></td></tr><tr><td><a href="https://www.zaobao.com/news/china/story20231013-1442519">博雷利：欧洲将以建设性和负责任方式管理对华关系</a></td></tr><tr><td><a href="https://www.zaobao.com/realtime/china/story20231013-1442486">北京警方：扎伤以色列外交人员家属外籍嫌犯已被抓</a></td></tr></tbody></table>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>音乐馆</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -579,11 +546,44 @@
     
     
     <entry>
+      <title></title>
+      <link href="/js/imgloaded.js"/>
+      <url>/js/imgloaded.js</url>
+      
+        <content type="html"><![CDATA[// 首页头图加载优化/** * @description 实现medium的渐进加载背景的效果 */class ProgressiveLoad {    constructor(smallSrc, largeSrc) {      this.smallSrc = smallSrc;      this.largeSrc = largeSrc;      this.initTpl();    }      /**     * @description 生成ui模板     */    initTpl() {      this.container = document.createElement('div');      this.smallStage = document.createElement('div');      this.largeStage = document.createElement('div');      this.smallImg = new Image();      this.largeImg = new Image();      this.container.className = 'pl-container';      this.smallStage.className = 'pl-img pl-blur';      this.largeStage.className = 'pl-img';      this.container.appendChild(this.smallStage);      this.container.appendChild(this.largeStage);      this.smallImg.onload = this._onSmallLoaded.bind(this);      this.largeImg.onload = this._onLargeLoaded.bind(this);    }      /**     * @description 加载背景     */    progressiveLoad() {      this.smallImg.src = this.smallSrc;      this.largeImg.src = this.largeSrc;    }      /**     * @description 大图加载完成     */    _onLargeLoaded() {      this.largeStage.classList.add('pl-visible');      this.largeStage.style.backgroundImage = `url('${this.largeSrc}')`;    }      /**     * @description 小图加载完成     */    _onSmallLoaded() {      this.smallStage.classList.add('pl-visible');      this.smallStage.style.backgroundImage = `url('${this.smallSrc}')`;    }  }    const executeLoad = (config, target) => {    console.log('执行渐进背景替换');    const isMobile = window.matchMedia('(max-width: 767px)').matches;    const loader = new ProgressiveLoad(      isMobile ? config.mobileSmallSrc : config.smallSrc,      isMobile ? config.mobileLargeSrc : config.largeSrc    );    // 和背景图颜色保持一致，防止高斯模糊后差异较大    if (target.children[0]) {      target.insertBefore(loader.container, target.children[0]);    }    loader.progressiveLoad();  };    const config = {    smallSrc: 'https://img01.anheyu.com/useruploads/151/2023/11/02/65439160c2181.webp', // 小图链接 尽可能配置小于100k的图片    largeSrc: 'https://img01.anheyu.com/useruploads/151/2023/11/03/65450c57436bc.webp', // 大图链接 最终显示的图片    mobileSmallSrc: 'https://img01.anheyu.com/useruploads/151/2023/11/03/65450f9a3279e.jpg', // 手机端小图链接 尽可能配置小于100k的图片    mobileLargeSrc: 'https://img01.anheyu.com/useruploads/151/2023/11/03/65450f82e7ec6.jpg', // 手机端大图链接 最终显示的图片    enableRoutes: ['/'],    };  function initProgressiveLoad(config) {    const target = document.getElementById('page-header');    if (target && target.classList.contains('full_page')) {      executeLoad(config, target);    }  }    function onPJAXComplete(config) {    const target = document.getElementById('page-header');    if (target && target.classList.contains('full_page')) {      initProgressiveLoad(config);    }  }  document.addEventListener("DOMContentLoaded", function() {    initProgressiveLoad(config);  });    document.addEventListener("pjax:complete", function() {    onPJAXComplete(config);  });]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>本站更新日志</title>
       <link href="/update/index.html"/>
       <url>/update/index.html</url>
       
         <content type="html"><![CDATA[<div class="timeline undefined"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>更新记录</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-11-6</p></div></div><div class='timeline-item-content'><h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><ol><li>域名新增：<a href="https://etulishi.cn/">https://etulishi.cn/</a></li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-11-6</p></div></div><div class='timeline-item-content'><h2 id="样式优化"><a href="#样式优化" class="headerlink" title="样式优化"></a>样式优化</h2><ol><li>优化了顶栏site-page的样式，柔和而完美！</li></ol><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><ol><li>魔改日志</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-11-1</p></div></div><div class='timeline-item-content'><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><ol><li>更新了首页大图，增加观赏性以及略（大）微（幅）增加首屏加载速度！</li></ol><h2 id="修复"><a href="#修复" class="headerlink" title="修复"></a>修复</h2><ol><li>通过替换相同有效链接修复了音乐馆bug</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-11-1</p></div></div><div class='timeline-item-content'><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><ol><li>尝试GitHub Actions自动部署，失败☹️</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-11-1</p></div></div><div class='timeline-item-content'><h2 id="紧急维修‼️"><a href="#紧急维修‼️" class="headerlink" title="紧急维修‼️"></a>紧急维修‼️</h2><ol><li>因为登的神奇操作，导致项目原分支被删除并且没有做备份，以至于停更1天</li><li>但是登就是登，依靠着另一台电脑的操作极大、极速地挽救了这次事故</li></ol><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><ul><li>这个栏目停更了半个月，统一说一下更新的事～</li></ul><ol><li>做了两个单独的网站，分别是：SDG的性别平等项目（<a href="https://xbpd.etulishi.cn)和wwk-狼人杀项目(https//wwk.etulishi.cn%EF%BC%89">https://xbpd.etulishi.cn）和WWK-狼人杀项目（https://wwk.etulishi.cn）</a></li><li>尝试了每日热点（新闻爬虫），但（暂时?）失败，先暂停该项目</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-10-15</p></div></div><div class='timeline-item-content'><h2 id="更新-项目"><a href="#更新-项目" class="headerlink" title="更新 | 项目"></a>更新 | 项目</h2><ol><li>更新了新闻爬虫页面，并且在GPT3.5的帮助下成功找到通过Github Actions的方式来自动执行程序、生成文件等</li><li>通过ChatGPT Next Web框架填入openai key搭建了一个精美的GPT3.5使用页面，国内即可使用，不用代理</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-9-23</p></div></div><div class='timeline-item-content'><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><ol><li>完善了swpp缓存和网站PWA的图标</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-9-23</p></div></div><div class='timeline-item-content'><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><ol><li>更新了理实相册</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-9-11</p></div></div><div class='timeline-item-content'><h2 id="调整-优化"><a href="#调整-优化" class="headerlink" title="调整&amp;优化"></a>调整&amp;优化</h2><ol><li>改回了music.pug中的data-lrctype的值，以优化用户视觉效果</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-9-10</p></div></div><div class='timeline-item-content'><h2 id="修复"><a href="#修复" class="headerlink" title="修复"></a>修复</h2><ol><li>修复了左下角音乐药丸无法显示的问题（通过<strong>看元素</strong>修改了music.pug中的data-lrctype的值，将0改为1）</li></ol></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-9-9</p></div></div><div class='timeline-item-content'><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><ol><li>本站建站成功 </li><li>换了lishiblog的GitHub账号登录vercel，然后将域名绑定在lishi.etulishi.cn上，成功加快加载速度（居然还可以这么操作哈哈哈哈）</li><li>因为管理了两个Github账号以及仓库，ssh冲突了，只能用一个。于是我改掉了源仓库rsa文件名，再让他生成一个，于是就不冲突了，要用哪个仓库就把哪个关联仓库的rsa文件名字改过来。但是这个方法非常原始，脑洞也很大哈哈哈哈哈哈</li></ol></div></div></div>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/custom.js"/>
+      <url>/js/custom.js</url>
+      
+        <content type="html"><![CDATA[// page情况下的site-page-fiexdwindow.onload = function() {      var site_page = document.querySelector('#menus > div.menus_items > div > a');    if (window.getComputedStyle(site_page).backgroundColor === '#5da32e') {          site_page.style.color = '#fff';        site_page.setAttribute('style', 'color: #fff;');    }  };  ]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>文章标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
